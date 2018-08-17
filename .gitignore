@@ -1,2 +1,10 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Django
 db.sqlite3
-__pycache__
+migrations/
+
+
+
