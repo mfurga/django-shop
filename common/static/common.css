@@ -1,0 +1,62 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+* { margin: 0; padding: 0; }
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333; 
+}
+
+a { text-decoration: none; color: #2dc79d; }
+
+a:hover { text-decoration: underline; color: #239c7b; }
+
+.container {
+    width: 870px;
+    margin: 0 auto; 
+    position: relative;
+    text-align: left;
+}
+
+.clear:after { content: ''; display: block; clear: both; }
+
+.fbold { font-weight: bold; }
+
+.fright { float: right; }
+
+.fleft { float: left; }
+
+.tupper { text-transform: uppercase; }
+
+.btn {
+    font-weight: bold;
+}
+
+#navbar {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#navbar a:hover { text-decoration: none; }
+
+#navbar .navbar-user {
+    margin: 12px 0;
+    padding: 8px 0 8px 18px;
+    text-transform: uppercase;
+    color: #337ab7;
+}
+
+#navbar .navbar-user:hover { color: #144e56; }
+
+#navbar .btn-new-ad {
+    margin: 14px 0;
+    padding: 6px 15px;
+    background: #ff9900;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#navbar .btn-new-ad:hover { background: #ffb100; }

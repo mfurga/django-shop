@@ -1,16 +1,11 @@
-{% load static %}
-<!doctype html>
+{% load static %}<!doctype html>
 <html lang="pl">
 <head>
     <meta charset="utf-8">
-    <title>{% block title %}{% endblock %}</title>
-
-
+    <title>{% block title %}&middot; django-shop{% endblock %}</title>
     {% block head %}{% endblock %}
 </head>
 <body>
-    {% block content %}
-
-    {% endblock %}
+    {% block content %}{% endblock %}
 </body>
 </html>

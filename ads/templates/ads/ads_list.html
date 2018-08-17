@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %} {% trans "List of ads" %} {{ block.super }} {% endblock %}
+
+# Static files
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'footer.css' %}">
+{% endblock %}
+{% block content %}
+    {% include 'header.html' %}
+
+    <footer id="footer"></footer>
+{% endblock %}
