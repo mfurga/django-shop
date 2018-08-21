@@ -19,47 +19,43 @@
                     <div id="search" class="navbar-form">
                     <div class="row clear">
                         <div class="query">
-                            <input id="query" name="q" type="search" class="search-input" placeholder="Czego szukasz?">
+                            <input id="query" name="q" type="search" class="search-input" placeholder="{% trans "What are you looking for?" %}">
                         </div>
                         <div class="location">
-                            <input id="location" name="location" type="search" class="search-location" placeholder="Miejscowość" >
+                            <input id="location" name="location" type="search" class="search-location" placeholder="{% trans "Location" %}" >
                         </div>
                     </div>
                 </div>
                 <div id="categories">
-                    {% for i, cat in categories %}
-                    
-
-                    {% endfor %}
-                        <ul>
+                    <ul>
                         <li class="item" id="cat-1">
                             <a>
                                 <div class="icon"><i class="fa fa-car fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Motoryzacja</div>
+                                <div class="icon-title">{% trans "Automotive" %}</div>
                             </a>
                         </li>
                         <li class="item" id="cat-2">
                             <a>
                                 <div class="icon"><i class="fa fa-television fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Elektronika</div>
+                                <div class="icon-title">{% trans "Electronics" %}</div>
                             </a>
                         </li>
                         <li class="item" id="cat-3">
                             <a>
                                 <div class="icon"><i class="fa fa-bath fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Dom i ogród</div>
+                                <div class="icon-title">{% trans "House and Garden" %}</div>
                             </a>
                         </li>
                         <li class="item" id="cat-4">
                             <a>
                                 <div class="icon"><i class="fa fa-home fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Nieruchomości</div>
+                                <div class="icon-title">{% trans "Immovables" %}</div>
                             </a>
                         </li>
                         <li class="item" id="cat-5">
                             <a>
                                 <div class="icon"><i class="fa fa-book fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Książki</div>
+                                <div class="icon-title">{% trans "Books" %}</div>
                             </a>
                         </li>
                     </ul>
@@ -67,31 +63,31 @@
                         <li class="item" id="cat-6">
                             <a>
                                 <div class="icon"><i class="fa fa-gamepad fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Gry</div>
+                                <div class="icon-title">{% trans "Games" %}</div>
                             </a>
                         </li>
                         <li class="item" id="cat-7">
                             <a>
                                 <div class="icon"><i class="fa fa-futbol-o fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Sport</div>
+                                <div class="icon-title">{% trans "Sport" %}</div>
                             </a>
                         </li>
                         <li class="item" id="cat-8">
                             <a>
                                 <div class="icon"><i class="fa fa-truck fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Rolnictwo</div>
+                                <div class="icon-title">{% trans "Farming" %}</div>
                             </a>
                         </li>
                         <li class="item" id="cat-9">
                             <a>
                                 <div class="icon"><i class="fa fa-paw fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Zwierzęta</div>
+                                <div class="icon-title">{% trans "Pets" %}</div>
                             </a>
                         </li>
                         <li class="item" id="cat-10">
                             <a>
                                 <div class="icon"><i class="fa fa-film fa-2x" aria-hidden="true"></i></div>
-                                <div class="icon-title">Filmy & Muzyka</div>
+                                <div class="icon-title">{% trans "Movies & Music" %}</div>
                             </a>
                         </li>
                     </ul>
@@ -100,18 +96,18 @@
                     <ul class="row">
                         <li class="item">
                             <select id="condition" class="condition" name="condition">
-                                <option style="color: #797979" disabled selected>Wybierz stan</option>
-                                <option value="0">Używane</option>
-                                <option value="1">Nowe</option>
+                                <option style="color: #797979" disabled selected>{% trans "Choose condition" %}</option>
+                                <option value="0">{% trans "Usage" %}</option>
+                                <option value="1">{% trans "New" %}</option>
                             </select>
                         </li>
-                        <li class="item"><input id="min" name="min" class="price" type="number" min="0" placeholder="Cena od"></li>
-                        <li class="item"><input id="max" name="max" class="price" type="number" min="0" placeholder="Cena do"></li>
+                        <li class="item"><input id="min" name="min" class="price" type="number" min="0" placeholder="{% trans "Price from" %}"></li>
+                        <li class="item"><input id="max" name="max" class="price" type="number" min="0" placeholder="{% trans "Price to" %}"></li>
                         <li class="item">
                             <input id="p" name="p" class="checkbox" type="checkbox" value="1">
-                            <label for="p">Tylko ze zdjęciem</label>
+                            <label for="p">{% trans "Only with a photo" %}</label>
                         </li>
-                        <li class="item fright"><button class="search-button fbold" type="submit"><i class="fa fa-search" aria-hidden="true"></i> Szukaj</button></li>
+                        <li class="item fright"><button class="search-button fbold" type="submit"><i class="fa fa-search" aria-hidden="true"></i> {% trans "Search" %}</button></li>
                     </ul>
                 </div>
                 </form>

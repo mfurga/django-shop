@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-21 10:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#: ads/models.py:10 ads/templates/ads/ads_list.html:34
+msgid "Automotive"
+msgstr "Motoryzacja"
+
+#: ads/models.py:11 ads/templates/ads/ads_list.html:40
+msgid "Electronics"
+msgstr "Elektronika"
+
+#: ads/models.py:12 ads/templates/ads/ads_list.html:46
+msgid "House and Garden"
+msgstr "Dom i ogród"
+
+#: ads/models.py:13 ads/templates/ads/ads_list.html:52
+msgid "Immovables"
+msgstr "Nieruchomości"
+
+#: ads/models.py:14 ads/templates/ads/ads_list.html:58
+msgid "Books"
+msgstr "Książki"
+
+#: ads/models.py:15 ads/templates/ads/ads_list.html:66
+msgid "Games"
+msgstr "Gry"
+
+#: ads/models.py:16 ads/templates/ads/ads_list.html:72
+msgid "Sport"
+msgstr "Sport"
+
+#: ads/models.py:17 ads/templates/ads/ads_list.html:78
+msgid "Farming"
+msgstr "Rolnictwo"
+
+#: ads/models.py:18 ads/templates/ads/ads_list.html:84
+msgid "Pets"
+msgstr "Zwierzęta"
+
+#: ads/models.py:19 ads/templates/ads/ads_list.html:90
+msgid "Movies & Music"
+msgstr "Filmy & Muzyka"
+
+#: ads/models.py:23 ads/templates/ads/ads_list.html:100
+msgid "Usage"
+msgstr "Używany"
+
+#: ads/models.py:24 ads/templates/ads/ads_list.html:101
+msgid "New"
+msgstr "Nowy"
+
+#: ads/templates/ads/ads_list.html:5
+msgid "List of ads"
+msgstr "Lista ogłoszeń"
+
+#: ads/templates/ads/ads_list.html:22
+msgid "What are you looking for?"
+msgstr "Czego szukasz?"
+
+#: ads/templates/ads/ads_list.html:25
+msgid "Location"
+msgstr "Lokalizacja"
+
+#: ads/templates/ads/ads_list.html:99
+msgid "Choose condition"
+msgstr "Wybierz stan"
+
+#: ads/templates/ads/ads_list.html:104
+msgid "Price from"
+msgstr "Cena od"
+
+#: ads/templates/ads/ads_list.html:105
+msgid "Price to"
+msgstr "Cena do"
+
+#: ads/templates/ads/ads_list.html:108
+msgid "Only with a photo"
+msgstr "Tylko ze zdjęciem"
+
+#: ads/templates/ads/ads_list.html:110
+msgid "Search"
+msgstr "Szukaj"
+
+#: ads/templates/ads/ads_list.html:124
+msgid "All ads"
+msgstr "Wszystkie ogłoszenia"
+
+#: ads/templates/ads/ads_list.html:130
+msgid "sort by"
+msgstr "sortuj według"
+
+#: ads/templates/ads/ads_list.html:130
+msgid "date"
+msgstr "data ogłoszenia"
+
+#: ads/templates/ads/ads_list.html:130
+msgid "price"
+msgstr "cena"
+
+#: common/templates/header.html:6
+msgid "Logout"
+msgstr "Wyloguj się"
+
+#: common/templates/header.html:11
+msgid "Sign in"
+msgstr "Zaloguj się"
+
+#: common/templates/header.html:16
+msgid "Add new ad"
+msgstr "Dodaj ogłoszenie"
