@@ -13,6 +13,8 @@ a { text-decoration: none; color: #2dc79d; }
 
 a:hover { text-decoration: underline; color: #239c7b; }
 
+tr, td { text-align: left; }
+
 .container {
     width: 870px;
     margin: 0 auto; 
@@ -29,6 +31,17 @@ a:hover { text-decoration: underline; color: #239c7b; }
 .fleft { float: left; }
 
 .tupper { text-transform: uppercase; }
+
+.tcenter { text-align: center; }
+
+input, select {
+    -ms-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input:focus, select:focus, textarea:focus { outline: none; }
 
 .btn {
     font-weight: bold;
