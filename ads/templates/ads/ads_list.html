@@ -114,5 +114,48 @@
             </div>
         </div>
     </section>
+        <section id="search-result">
+        <div class="container">
+            <div class="top clear">
+                <div class="fleft">
+                    <nav aria-label="breadcrumb" role="navigation">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">{% trans "All ads" %}</a></li>
+                            <li class="breadcrumb-item active" id="active"><a href="" class="breadcrumb-link"></a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="fright sorting">
+                    {% trans "sort by" %}: <span class="sort" id="time"><i class="fa fa-arrow-down"></i> {% trans "date" %}</span> <span class="sort" id="price"><i class="fa fa-arrow-down"></i> {% trans "price" %}</span>
+                </div>
+            </div>
+            <div class="result">
+                {% if not ads %}
+                    <div class="noads tcenter fbold">{% trans "No ads" %}</div>
+                {% else %}
+                    <ul>
+                        {% for ad in ads %}
+                            <li class="result-item clear">
+                                <table class="details">
+                                    <tr>
+                                        <td width="190px"><a href="#" class="bg-image"><img src="{{ ad.image.get_absolute_url }}" class="image" alt></a></td>
+                                        <td class="detail">
+                                            <h3><a href="#">{{ ad.title }}</a></h3>
+                                            <div class="location">{% trans "Localization" %}: {{ ad.location }}</div>
+                                            <div class="author" >{% trans "Added" %} {{ ad.pub_date|timesince }} {% trans "ago" %} {% trans "by" %} {{ ad.author }}</div>
+                                        </td>
+                                        <td>
+                                            <h2 class="fright">{{ ad.price }}</h2>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </section>
     <footer id="footer"></footer>
 {% endblock %}

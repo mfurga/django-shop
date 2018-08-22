@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-21 10:59+0000\n"
+"POT-Creation-Date: 2018-08-22 12:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -115,6 +115,28 @@ msgstr "data ogłoszenia"
 #: ads/templates/ads/ads_list.html:130
 msgid "price"
 msgstr "cena"
+
+#: ads/templates/ads/ads_list.html:135
+msgid "No ads"
+msgstr "Brak ogłoszeń"
+
+#: ads/templates/ads/ads_list.html:145
+#, fuzzy
+#| msgid "Location"
+msgid "Localization"
+msgstr "Lokalizacja"
+
+#: ads/templates/ads/ads_list.html:146
+msgid "Added"
+msgstr "Dodano"
+
+#: ads/templates/ads/ads_list.html:146
+msgid "ago"
+msgstr "temu"
+
+#: ads/templates/ads/ads_list.html:146
+msgid "by"
+msgstr "przez"
 
 #: common/templates/header.html:6
 msgid "Logout"
