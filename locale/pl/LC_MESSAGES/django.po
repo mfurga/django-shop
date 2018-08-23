@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-22 12:34+0000\n"
+"POT-Creation-Date: 2018-08-23 07:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,6 +137,10 @@ msgstr "temu"
 #: ads/templates/ads/ads_list.html:146
 msgid "by"
 msgstr "przez"
+
+#: ads/templates/ads/ads_list.html:161
+msgid "Source code available on"
+msgstr "Kod źródłowy dostępny na"
 
 #: common/templates/header.html:6
 msgid "Logout"

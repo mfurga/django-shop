@@ -3,7 +3,7 @@
 * { margin: 0; padding: 0; }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.4;
     color: #333; 
@@ -73,3 +73,10 @@ input:focus, select:focus, textarea:focus { outline: none; }
 }
 
 #navbar .btn-new-ad:hover { background: #ffb100; }
+
+#footer {
+    padding: 20px 0;
+    background: #f9f9f9;
+    color: #8c8c8c;
+    border-top: 1px solid #ececec; 
+}
