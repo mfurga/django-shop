@@ -6,9 +6,13 @@
 
 # Static files
 {% block head %}
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'footer.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'ads/ads_list.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ads/css/ads_list.css' %}">
+
+    <!-- JS -->
+    <script type="text/javascript" src="{% static 'ads/js/jquery-3.3.1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ads/js/search.js' %}"></script>
 {% endblock %}
 {% block content %}
     {% include 'header.html' %}
@@ -19,10 +23,10 @@
                     <div id="search" class="navbar-form">
                     <div class="row clear">
                         <div class="query">
-                            <input id="query" name="q" type="search" class="search-input" placeholder="{% trans "What are you looking for?" %}">
+                             {{ form.query }}
                         </div>
                         <div class="location">
-                            <input id="location" name="location" type="search" class="search-location" placeholder="{% trans "Location" %}" >
+                            {{ form.location }}
                         </div>
                     </div>
                 </div>
@@ -95,17 +99,17 @@
                 <div class="search-filters">
                     <ul class="row">
                         <li class="item">
-                            <select id="condition" class="condition" name="condition">
-                                <option style="color: #797979" disabled selected>{% trans "Choose condition" %}</option>
-                                <option value="0">{% trans "Usage" %}</option>
-                                <option value="1">{% trans "New" %}</option>
-                            </select>
+                            {{ form.condition }}
                         </li>
-                        <li class="item"><input id="min" name="min" class="price" type="number" min="0" placeholder="{% trans "Price from" %}"></li>
-                        <li class="item"><input id="max" name="max" class="price" type="number" min="0" placeholder="{% trans "Price to" %}"></li>
                         <li class="item">
-                            <input id="p" name="p" class="checkbox" type="checkbox" value="1">
-                            <label for="p">{% trans "Only with a photo" %}</label>
+                            {{ form.price_from }}
+                        </li>
+                        <li class="item">
+                            {{ form.price_to }}
+                        </li>
+                        <li class="item">
+                            {{ form.image_only }}
+                            {{ form.image_only.label}}
                         </li>
                         <li class="item fright"><button class="search-button fbold" type="submit"><i class="fa fa-search" aria-hidden="true"></i> {% trans "Search" %}</button></li>
                     </ul>
@@ -146,7 +150,7 @@
                                             <div class="author" >{% trans "Added" %} {{ ad.pub_date|timesince }} {% trans "ago" %} {% trans "by" %} {{ ad.author }}</div>
                                         </td>
                                         <td>
-                                            <h2 class="fright">{{ ad.price }}</h2>
+                                            <h2 class="fright">{{ ad.price }} PLN</h2>
                                         </td>
                                     </tr>
                                 </table>
