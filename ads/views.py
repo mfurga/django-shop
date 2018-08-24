@@ -1,8 +1,29 @@
 from django.shortcuts import render
 
+from .scripts import RequestGETParse
+from .forms import AdSearchFrom
 from .models import Ad
 
 
 def ads_list(request):
     ads = Ad.objects.all()
-    return render(request, 'ads/ads_list.html', {'ads':ads})
+
+    if request.method == 'GET' and request.GET:
+        form = AdSearchFrom(request.GET)
+
+        res = {k: v for k, v in request.GET.items() if v}
+        parser = RequestGETParse(ads)
+        for k, v in res.items():
+            try:
+                getattr(parser, k)(v)
+            except AttributeError:
+                pass
+        ads = parser.get_objects()
+    else:
+        form = AdSearchFrom()
+
+    context = {
+        'ads': ads,
+        'form': form
+    }
+    return render(request, 'ads/ads_list.html', context)
