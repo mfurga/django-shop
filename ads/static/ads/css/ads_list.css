@@ -26,6 +26,10 @@
     float: right;
 }
 
+#form input:disabled {
+    background: #fff;
+}
+
 #categories {
     padding: 5px 0;
     background: #f5f5f5;
@@ -101,11 +105,11 @@
     cursor: pointer;
 }
 
-.active {
+#categories .active {
     background: #107f72;
 }
 
-.active a {
+#categories .active a {
     color: #fff !important;
 }
 
@@ -221,7 +225,6 @@
 }
 
 #search-result .top .breadcrumb .active {
-    background: #f9f9f9;
     display: none;
 }
 
