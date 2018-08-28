@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
 
 from .scripts import RequestGETParse
@@ -21,6 +22,16 @@ def ads_list(request):
         ads = parser.get_objects()
     else:
         form = AdSearchFrom()
+
+    paginator = Paginator(ads, 1)
+    page = request.GET.get('page')
+
+    try:
+        ads = paginator.page(page)
+    except PageNotAnInteger:
+        ads = paginator.page(1)
+    except EmptyPage:
+        ads = paginator.page(paginator.num_pages)
 
     context = {
         'ads': ads,
