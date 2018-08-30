@@ -183,7 +183,6 @@
 }
 
 #search-result .top .sorting {
-    color: #888;
     font-size: 14px;
 }
 
@@ -216,12 +215,12 @@
     padding-right: 0.5rem;
     padding-left: 0.5rem;
     content: '\f105';
-    color: #888;
+    color: #585858;
 }
 
 #search-result .top .breadcrumb .breadcrumb-link {
     font-size: 15px;
-    color: #888;
+    color: #585858;
 }
 
 #search-result .top .breadcrumb .active {
@@ -274,16 +273,19 @@
     width: 500px;
     padding: 0 10px;
     vertical-align: top;
+    color: #585858;
 }
 
 #search-result .result .result-item .detail .location {
-    color: #888;
 }
 
 #search-result .result .result-item .detail .author {
-    color: #888;
     margin-top: 50px;
     font-size: 13px;
+}
+
+#search-result .result .result-item .price {
+    color: #585858;
 }
 
 #search-result .pagination {
@@ -293,20 +295,9 @@
 }
 
 #search-result .pagination a {
-    padding: 8px 16px;
-    transition: background-color .3s;
+    padding: 8px 8px;
     text-decoration: none;
     border-radius: 5px;
-}
-
-#search-result .pagination a.active {
-    color: #fff;
-    background: #2dc79d;
-}
-
-#search-result .pagination a:hover:not(.active) {
-    color: #fff;
-    background: #2dc79d;
 }
 
 .noads {

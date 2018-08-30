@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-23 07:35+0000\n"
+"POT-Creation-Date: 2018-08-30 10:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,127 +20,133 @@ msgstr ""
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: ads/models.py:10 ads/templates/ads/ads_list.html:34
-msgid "Automotive"
-msgstr "Motoryzacja"
-
-#: ads/models.py:11 ads/templates/ads/ads_list.html:40
-msgid "Electronics"
-msgstr "Elektronika"
-
-#: ads/models.py:12 ads/templates/ads/ads_list.html:46
-msgid "House and Garden"
-msgstr "Dom i ogród"
-
-#: ads/models.py:13 ads/templates/ads/ads_list.html:52
-msgid "Immovables"
-msgstr "Nieruchomości"
-
-#: ads/models.py:14 ads/templates/ads/ads_list.html:58
-msgid "Books"
-msgstr "Książki"
-
-#: ads/models.py:15 ads/templates/ads/ads_list.html:66
-msgid "Games"
-msgstr "Gry"
-
-#: ads/models.py:16 ads/templates/ads/ads_list.html:72
-msgid "Sport"
-msgstr "Sport"
-
-#: ads/models.py:17 ads/templates/ads/ads_list.html:78
-msgid "Farming"
-msgstr "Rolnictwo"
-
-#: ads/models.py:18 ads/templates/ads/ads_list.html:84
-msgid "Pets"
-msgstr "Zwierzęta"
-
-#: ads/models.py:19 ads/templates/ads/ads_list.html:90
-msgid "Movies & Music"
-msgstr "Filmy & Muzyka"
-
-#: ads/models.py:23 ads/templates/ads/ads_list.html:100
-msgid "Usage"
-msgstr "Używany"
-
-#: ads/models.py:24 ads/templates/ads/ads_list.html:101
-msgid "New"
-msgstr "Nowy"
-
-#: ads/templates/ads/ads_list.html:5
-msgid "List of ads"
-msgstr "Lista ogłoszeń"
-
-#: ads/templates/ads/ads_list.html:22
+#: ads/forms.py:13
 msgid "What are you looking for?"
 msgstr "Czego szukasz?"
 
-#: ads/templates/ads/ads_list.html:25
+#: ads/forms.py:21
 msgid "Location"
 msgstr "Lokalizacja"
 
-#: ads/templates/ads/ads_list.html:99
-msgid "Choose condition"
-msgstr "Wybierz stan"
-
-#: ads/templates/ads/ads_list.html:104
+#: ads/forms.py:35
 msgid "Price from"
 msgstr "Cena od"
 
-#: ads/templates/ads/ads_list.html:105
+#: ads/forms.py:43
 msgid "Price to"
 msgstr "Cena do"
 
-#: ads/templates/ads/ads_list.html:108
+#: ads/forms.py:48
 msgid "Only with a photo"
 msgstr "Tylko ze zdjęciem"
 
-#: ads/templates/ads/ads_list.html:110
+#: ads/models.py:10 ads/templates/ads/ads_list.html:39
+msgid "Automotive"
+msgstr "Motoryzacja"
+
+#: ads/models.py:11 ads/templates/ads/ads_list.html:45
+msgid "Electronics"
+msgstr "Elektronika"
+
+#: ads/models.py:12 ads/templates/ads/ads_list.html:51
+msgid "House and Garden"
+msgstr "Dom i ogród"
+
+#: ads/models.py:13 ads/templates/ads/ads_list.html:57
+msgid "Immovables"
+msgstr "Nieruchomości"
+
+#: ads/models.py:14 ads/templates/ads/ads_list.html:63
+msgid "Books"
+msgstr "Książki"
+
+#: ads/models.py:15 ads/templates/ads/ads_list.html:71
+msgid "Games"
+msgstr "Gry"
+
+#: ads/models.py:16 ads/templates/ads/ads_list.html:77
+msgid "Sport"
+msgstr "Sport"
+
+#: ads/models.py:17 ads/templates/ads/ads_list.html:83
+msgid "Farming"
+msgstr "Rolnictwo"
+
+#: ads/models.py:18 ads/templates/ads/ads_list.html:89
+msgid "Pets"
+msgstr "Zwierzęta"
+
+#: ads/models.py:19 ads/templates/ads/ads_list.html:95
+msgid "Movies & Music"
+msgstr "Filmy & Muzyka"
+
+#: ads/models.py:23
+msgid "Usage"
+msgstr "Używany"
+
+#: ads/models.py:24
+msgid "New"
+msgstr "Nowy"
+
+#: ads/templates/ads/ads_create.html:5
+#, fuzzy
+#| msgid "Add new ad"
+msgid "Add new add"
+msgstr "Dodaj ogłoszenie"
+
+#: ads/templates/ads/ads_create.html:144 ads/templates/ads/ads_list.html:177
+msgid "Source code available on"
+msgstr "Kod źródłowy dostępny na"
+
+#: ads/templates/ads/ads_list.html:6
+msgid "List of ads"
+msgstr "Lista ogłoszeń"
+
+#: ads/templates/ads/ads_list.html:115
 msgid "Search"
 msgstr "Szukaj"
 
-#: ads/templates/ads/ads_list.html:124
+#: ads/templates/ads/ads_list.html:129
 msgid "All ads"
 msgstr "Wszystkie ogłoszenia"
 
-#: ads/templates/ads/ads_list.html:130
+#: ads/templates/ads/ads_list.html:135
 msgid "sort by"
 msgstr "sortuj według"
 
-#: ads/templates/ads/ads_list.html:130
+#: ads/templates/ads/ads_list.html:135
 msgid "date"
 msgstr "data ogłoszenia"
 
-#: ads/templates/ads/ads_list.html:130
+#: ads/templates/ads/ads_list.html:135
 msgid "price"
 msgstr "cena"
 
-#: ads/templates/ads/ads_list.html:135
+#: ads/templates/ads/ads_list.html:140
 msgid "No ads"
 msgstr "Brak ogłoszeń"
 
-#: ads/templates/ads/ads_list.html:145
+#: ads/templates/ads/ads_list.html:150
 #, fuzzy
 #| msgid "Location"
 msgid "Localization"
 msgstr "Lokalizacja"
 
-#: ads/templates/ads/ads_list.html:146
+#: ads/templates/ads/ads_list.html:151
 msgid "Added"
 msgstr "Dodano"
 
-#: ads/templates/ads/ads_list.html:146
+#: ads/templates/ads/ads_list.html:151
 msgid "ago"
 msgstr "temu"
 
-#: ads/templates/ads/ads_list.html:146
+#: ads/templates/ads/ads_list.html:151
 msgid "by"
 msgstr "przez"
 
-#: ads/templates/ads/ads_list.html:161
-msgid "Source code available on"
-msgstr "Kod źródłowy dostępny na"
+#: ads/templates/ads/ads_list.html:166
+msgid "of"
+msgstr "z"
 
 #: common/templates/header.html:6
 msgid "Logout"
@@ -153,3 +159,6 @@ msgstr "Zaloguj się"
 #: common/templates/header.html:16
 msgid "Add new ad"
 msgstr "Dodaj ogłoszenie"
+
+#~ msgid "Choose condition"
+#~ msgstr "Wybierz stan"
