@@ -247,8 +247,8 @@
 
 #search-result .result .result-item .bg-image {
     width: 100%;
-    height: 130px;
-    line-height: 130px;
+    height: 110px;
+    line-height: 110px;
     display: block;
     background: #f7f7f7;
     text-align: center;
@@ -257,8 +257,8 @@
 }
 
 #search-result .result .result-item .bg-image .image {
-    max-height: 130px;
-    max-width: 190px;
+    max-height: 110px;
+    max-width: 180px;
     border: 0;
     vertical-align: middle;
     text-align: center;
@@ -271,16 +271,17 @@
 
 #search-result .result .result-item .detail {
     width: 500px;
-    padding: 0 10px;
+    padding: 5px 10px;
     vertical-align: top;
     color: #585858;
 }
 
-#search-result .result .result-item .detail .location {
+#search-result .result .result-item .detail .location .fa-map-marker {
+    color: #006daf;
 }
 
-#search-result .result .result-item .detail .author {
-    margin-top: 50px;
+#search-result .result .result-item .detail .date {
+    margin-top: 40px;
     font-size: 13px;
 }
 

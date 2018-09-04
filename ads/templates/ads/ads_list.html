@@ -144,11 +144,11 @@
                             <li class="result-item clear">
                                 <table class="details">
                                     <tr>
-                                        <td width="190px"><a href="#" class="bg-image"><img src="{{ ad.image.get_absolute_url }}" class="image" alt></a></td>
+                                        <td width="180px"><a href="#" class="bg-image"><img src="{{ ad.image.get_absolute_url }}" class="image" alt></a></td>
                                         <td class="detail">
                                             <h3><a href="#">{{ ad.title }}</a></h3>
                                             <div class="location">{% trans "Location" %}: {{ ad.location }}</div>
-                                            <div class="author" >{% trans "Added" %} {{ ad.pub_date|timesince }} {% trans "ago" %} {% trans "by" %} {{ ad.author }}</div>
+                                            <div class="date">{% trans "Added" %}: {{ ad.pub_date|timesince }} {% trans "ago" %}</div>
                                         </td>
                                         <td class="price">
                                             <h2 class="fright">{{ ad.price }} PLN</h2>
@@ -159,13 +159,9 @@
                         {% endfor %}
                     </ul>
                     <div class="pagination">
-                        {% if ads.has_previous %}
-                            <a href="?{% pagination request ads.previous_page_number %}">&laquo;</a>
-                        {% endif %}
-                            {{ ads.number }} {% trans 'of' %} {{ ads.paginator.num_pages }}
-                        {% if ads.has_next %}
-                            <a href="?{% pagination request ads.next_page_number %}">&raquo;</a>
-                        {% endif %}
+                        <a {% if ads.has_previous %} href="?{% pagination request ads.previous_page_number %}"{% endif %}>&laquo;</a>
+                        {{ ads.number }} {% trans 'of' %} {{ ads.paginator.num_pages }}
+                        <a {% if ads.has_next %} href="?{% pagination request ads.next_page_number %}"{% endif %}>&raquo;</a>
                     </div>
                 {% endif %}
             </div>
