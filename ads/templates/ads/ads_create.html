@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Ad new add' %} {{ block.super }}{% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ads/css/ads_create.css' %}">
+    <script type="text/javascript" src="{% static 'ads/js/jquery-3.3.1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ads/js/image_preview.js' %}"></script>
+{% endblock %}
+{% block content %}
+    {% include 'header.html' %}
+    <section id="creator">
+        <div class="container">
+            <form class="adform" method="post" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="category block clear">
+                    <div class="fleft label">
+                        <label class="fbold tupper">{% trans 'Select categories' %} {% if form.title.field.required %}<span class="required">*</span>{% endif %}</label>
+                    </div>
+                    <div class="content">
+                        {{ form.category }}
+                        {% if form.category.errors %}
+                            <div class="error_message">
+                                {{ form.category.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="title block clear">
+                    <div class="fleft label">
+                        <label class="fbold tupper">{% trans 'Ad title' %} {% if form.title.field.required %}<span class="required">*</span>{% endif %}</label>
+                    </div>
+                    <div class="content">
+                        {{ form.title }}
+                        {% if form.title.errors %}
+                            <div class="error_message">
+                                {{ form.title.errors }}
+                            </div>
+                        {% endif %}
+                        <div class="information">
+                            {% trans 'Maximum length of the text is 50 characters' %}.
+                        </div>
+                    </div>
+                </div>
+                <div class="description block clear">
+                    <div class="fleft label">
+                        <label class="fbold tupper">{% trans 'Description' %} {% if form.description.field.required %}<span class="required">*</span>{% endif %}</label>
+                    </div>
+                    <div class="content">
+                        {{ form.description }}
+                        {% if form.description.errors %}
+                            <div class="error_message">
+                                {{ form.description.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="condition block clear">
+                    <div class="fleft label">
+                        <label class="fbold tupper">{% trans 'Condition' %} {% if form.condition.field.required %}<span class="required">*</span>{% endif %}</label>
+                    </div>
+                    <div class="content">
+                        {{ form.condition }}
+                        {% if form.condition.errors %}
+                            <div class="error_message">
+                                {{ form.condition.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="photos block clear">
+                    <div class="fleft label">
+                        <label class="fbold tupper">{% trans 'Photos' %}</label>
+                    </div>
+                    <div class="content">
+                        {{ form.photo }}
+                        {{ form.photo2 }}
+                        {{ form.photo3 }}
+                        {{ form.photo4 }}
+                        <div class="labels clear">
+                            <label for="photo" id="label" class="photo-label tcenter tupper fbold prime">
+                                {% trans 'Choose photo' %}
+                            </label>
+                            <label for="photo2" id="label2" class="photo-label tcenter tupper fbold">
+                                {% trans 'Choose photo' %}
+                            </label>
+                            <label for="photo3" id="label3" class="photo-label tcenter tupper fbold">
+                                {% trans 'Choose photo' %}
+                            </label>
+                            <label for="photo4" id="label4" class="photo-label tcenter tupper fbold">
+                                {% trans 'Choose photo' %}
+                            </label>
+                        </div>
+                        <p class="information">{% trans 'You can choose max 4 photos' %}. <span style="color: #ff9900;" class="fbold">{% trans 'First of them will be the prime photo' %}</span>.</p>
+                    </div>
+                </div>
+                <div class="location block clear">
+                    <div class="fleft label">
+                        <label class="fbold tupper">{% trans 'Location' %} {% if form.location.field.required %}<span class="required">*</span>{% endif %}</label>
+                    </div>
+                    <div class="content">
+                       {{ form.location }}
+                        {% if form.location.errors %}
+                            <div class="error_message">
+                                {{ form.location.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="price block clear">
+                    <div class="fleft label">
+                        <label class="fbold tupper">{% trans 'Price' %} {% if form.price.field.required %}<span class="required">*</span>{% endif %}</label>
+                    </div>
+                    <div class="content">
+                       {{ form.price }}
+                        {% if form.price.errors %}
+                            <div class="error_message">
+                                {{ form.price.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="phone block clear">
+                    <div class="fleft label">
+                        <label class="fbold tupper">{% trans 'Phone number' %} {% if form.phone.field.required %}<span class="required">*</span>{% endif %}</label>
+                    </div>
+                    <div class="content">
+                        {{ form.phone }}
+                        {% if form.phone.errors %}
+                            <div class="error_message">
+                                {{ form.phone.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="confirm">
+                    <button type="submit" class="button fbold">{% trans 'Ad new add' %} <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="text-center" style="padding-bottom: 15px; padding-left: 10px;">
+                    <a href="{% url 'ads:list' %}"><i class="fa fa-angle-double-left" aria-hidden="true"></i> {% trans 'Back to home page' %}</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <section class="elem">
+                        <ul class="list-category tcenter">
+                            <li><a href="{% url 'ads:list' %}?category=1">{% trans 'Automotive' %}</a></li>
+                            <li><a href="{% url 'ads:list' %}?category=2">{% trans 'Electronics' %}</a></li>
+                            <li><a href="{% url 'ads:list' %}?category=3">{% trans 'House and Garden' %}</a></li>
+                            <li><a href="{% url 'ads:list' %}?category=4">{% trans 'Immovables' %}</a></li>
+                            <li><a href="{% url 'ads:list' %}?category=5">{% trans 'Books' %}</a></li>
+                            <li><a href="{% url 'ads:list' %}?category=6">{% trans 'Games' %}</a></li>
+                            <li><a href="{% url 'ads:list' %}?category=7">{% trans 'Sport' %}</a></li>
+                            <li><a href="{% url 'ads:list' %}?category=8">{% trans 'Farming' %}</a></li>
+                            <li><a href="{% url 'ads:list' %}?category=9">{% trans 'Pets' %}</a></li>
+                            <li><a href="{% url 'ads:list' %}?category=10">{% trans 'Movies & Music' %}</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container clear">
+                <p class="tcenter">Source code avaiable on <a href="https://github.com/mfurga/django-shop">Github</a>.</p>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

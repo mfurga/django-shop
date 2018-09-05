@@ -1,0 +1,153 @@
+.error_message {
+    display: block;
+    padding-top: 10px;
+    color: #ff7979;
+}
+
+.error_message .errorlist {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.has_error {
+    border: 2px solid #ff7979 !important;
+}
+
+#creator {
+    padding: 15px 0;
+    background: #f9f9f9;
+}
+
+#creator .adform {
+    background: #fff;
+    border-radius: 8px;
+}
+
+#creator .adform .label {
+    width: 250px;
+    padding: 5px 0 0 10px;
+    font-size: 15px;
+    color: #4e4e4e;
+}
+
+#creator .adform .block {
+    padding: 30px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+#creator .adform .block .content {
+    margin-left: 260px;
+}
+
+#creator .adform .text_input {
+    margin: 0;
+    width: 400px;
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+    height: 20px;
+    vertical-align: top;
+    color: #797979;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#creator .adform .tel {
+    width: 200px;
+}
+
+#creator .adform .text_area {
+    padding: 5px;
+    min-width: 550px;
+    min-height: 150px;
+    font-size: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #797979;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#creator .adform .choices-list {
+    margin: 0;
+    width: 400px;
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+    height: 20px;
+    vertical-align: top;
+    color: #797979;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#creator .adform .choices-list option {
+    color: #333;
+}
+
+#creator .adform .photo {
+    background: #fff;
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#creator .adform .labels .photo-label {
+    display: flex;
+    float: left;
+    height: 100px;
+    width: 140px;
+    background: #f5f5f5;
+    align-items: center;
+    margin-right: 5px;
+    border-radius: 4px;
+    color: #888;
+    font-size: 18px;
+}
+
+#creator .adform .labels .photo-label:hover {
+    cursor: pointer;
+}
+
+#creator .adform .labels .prime {
+    width: 136px;
+    height: 96px;
+    border: 2px solid #ff9900;
+}
+
+#creator .adform .information {
+    width: 95%;
+    padding: 10px 5px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-style: italic;
+    color: #333;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+#creator .adform .required {
+    color: #ff7979;
+    font-size: 18px;
+}
+
+#creator .adform .confirm {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#creator .adform .confirm .button {
+    background: #ff9900;
+    padding: 7px 10px;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    border-radius: 4px;
+}
+
+#creator .adform .confirm .button:hover {
+    background: #ffb100;
+    cursor: pointer;
+}
+
