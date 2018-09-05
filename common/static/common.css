@@ -13,6 +13,8 @@ a { text-decoration: none; color: #2dc79d; }
 
 a:hover { text-decoration: underline; color: #239c7b; }
 
+ul, ol { list-style-type: none; }
+
 tr, td { text-align: left; }
 
 .container {
@@ -79,8 +81,28 @@ input[type=search]::-webkit-search-cancel-button {
 #navbar .btn-new-ad:hover { background: #ffb100; }
 
 #footer {
-    padding: 20px 0;
     background: #f9f9f9;
-    color: #585858;
-    border-top: 1px solid #ececec; 
+    font-size: 13px;
+}
+
+#footer .footer-top { padding: 10px 0; }
+
+.list-category li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.list-category li:after {
+    padding-left: 10px;
+    content: '·'
+}
+
+.list-category li:last-child:after {
+    content: none;
+    padding: 0;
+}
+
+#footer .footer-bottom {
+    padding: 20px 0;
+    background: #efefef;
 }
