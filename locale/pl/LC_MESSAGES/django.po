@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-30 10:09+0000\n"
+"POT-Creation-Date: 2018-09-05 10:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,8 @@ msgstr ""
 msgid "What are you looking for?"
 msgstr "Czego szukasz?"
 
-#: ads/forms.py:21
+#: ads/forms.py:21 ads/forms.py:113 ads/templates/ads/ads_create.html:100
+#: ads/templates/ads/ads_list.html:150
 msgid "Location"
 msgstr "Lokalizacja"
 
@@ -40,43 +41,57 @@ msgstr "Cena do"
 msgid "Only with a photo"
 msgstr "Tylko ze zdjęciem"
 
-#: ads/models.py:10 ads/templates/ads/ads_list.html:39
+#: ads/forms.py:61
+msgid "Title"
+msgstr "Tytuł"
+
+#: ads/models.py:10 ads/templates/ads/ads_create.html:153
+#: ads/templates/ads/ads_list.html:39 ads/templates/ads/ads_list.html:176
 msgid "Automotive"
 msgstr "Motoryzacja"
 
-#: ads/models.py:11 ads/templates/ads/ads_list.html:45
+#: ads/models.py:11 ads/templates/ads/ads_create.html:154
+#: ads/templates/ads/ads_list.html:45 ads/templates/ads/ads_list.html:177
 msgid "Electronics"
 msgstr "Elektronika"
 
-#: ads/models.py:12 ads/templates/ads/ads_list.html:51
+#: ads/models.py:12 ads/templates/ads/ads_create.html:155
+#: ads/templates/ads/ads_list.html:51 ads/templates/ads/ads_list.html:178
 msgid "House and Garden"
 msgstr "Dom i ogród"
 
-#: ads/models.py:13 ads/templates/ads/ads_list.html:57
+#: ads/models.py:13 ads/templates/ads/ads_create.html:156
+#: ads/templates/ads/ads_list.html:57 ads/templates/ads/ads_list.html:179
 msgid "Immovables"
 msgstr "Nieruchomości"
 
-#: ads/models.py:14 ads/templates/ads/ads_list.html:63
+#: ads/models.py:14 ads/templates/ads/ads_create.html:157
+#: ads/templates/ads/ads_list.html:63 ads/templates/ads/ads_list.html:180
 msgid "Books"
 msgstr "Książki"
 
-#: ads/models.py:15 ads/templates/ads/ads_list.html:71
+#: ads/models.py:15 ads/templates/ads/ads_create.html:158
+#: ads/templates/ads/ads_list.html:71 ads/templates/ads/ads_list.html:181
 msgid "Games"
 msgstr "Gry"
 
-#: ads/models.py:16 ads/templates/ads/ads_list.html:77
+#: ads/models.py:16 ads/templates/ads/ads_create.html:159
+#: ads/templates/ads/ads_list.html:77 ads/templates/ads/ads_list.html:182
 msgid "Sport"
 msgstr "Sport"
 
-#: ads/models.py:17 ads/templates/ads/ads_list.html:83
+#: ads/models.py:17 ads/templates/ads/ads_create.html:160
+#: ads/templates/ads/ads_list.html:83 ads/templates/ads/ads_list.html:183
 msgid "Farming"
 msgstr "Rolnictwo"
 
-#: ads/models.py:18 ads/templates/ads/ads_list.html:89
+#: ads/models.py:18 ads/templates/ads/ads_create.html:161
+#: ads/templates/ads/ads_list.html:89 ads/templates/ads/ads_list.html:184
 msgid "Pets"
 msgstr "Zwierzęta"
 
-#: ads/models.py:19 ads/templates/ads/ads_list.html:95
+#: ads/models.py:19 ads/templates/ads/ads_create.html:162
+#: ads/templates/ads/ads_list.html:95 ads/templates/ads/ads_list.html:185
 msgid "Movies & Music"
 msgstr "Filmy & Muzyka"
 
@@ -88,15 +103,58 @@ msgstr "Używany"
 msgid "New"
 msgstr "Nowy"
 
-#: ads/templates/ads/ads_create.html:5
-#, fuzzy
-#| msgid "Add new ad"
-msgid "Add new add"
+#: ads/templates/ads/ads_create.html:4 ads/templates/ads/ads_create.html:138
+msgid "Ad new add"
 msgstr "Dodaj ogłoszenie"
 
-#: ads/templates/ads/ads_create.html:144 ads/templates/ads/ads_list.html:177
-msgid "Source code available on"
-msgstr "Kod źródłowy dostępny na"
+#: ads/templates/ads/ads_create.html:19
+msgid "Select categories"
+msgstr "Wybierz kategorię"
+
+#: ads/templates/ads/ads_create.html:32
+msgid "Ad title"
+msgstr "Tytuł ogłoszenia"
+
+#: ads/templates/ads/ads_create.html:42
+msgid "Maximum length of the text is 50 characters"
+msgstr "Maksymalna długość tekstu wynosi 50 znaków"
+
+#: ads/templates/ads/ads_create.html:48
+msgid "Description"
+msgstr "Opis"
+
+#: ads/templates/ads/ads_create.html:61
+msgid "Condition"
+msgstr "Stan"
+
+#: ads/templates/ads/ads_create.html:74
+msgid "Photos"
+msgstr "Zdjęcia"
+
+#: ads/templates/ads/ads_create.html:83 ads/templates/ads/ads_create.html:86
+#: ads/templates/ads/ads_create.html:89 ads/templates/ads/ads_create.html:92
+msgid "Choose photo"
+msgstr "Wybierz zdjęcie"
+
+#: ads/templates/ads/ads_create.html:95
+msgid "You can choose max 4 photos"
+msgstr "Możesz wybrać maksymalnie 4 zdjęcia"
+
+#: ads/templates/ads/ads_create.html:95
+msgid "First of them will be the prime photo"
+msgstr "Pierwsze z nich bedzie zjęciem głównym"
+
+#: ads/templates/ads/ads_create.html:113
+msgid "Price"
+msgstr "Cena"
+
+#: ads/templates/ads/ads_create.html:126
+msgid "Phone number"
+msgstr "Number telefonu"
+
+#: ads/templates/ads/ads_create.html:142
+msgid "Back to home page"
+msgstr "Powrót do strony głównej"
 
 #: ads/templates/ads/ads_list.html:6
 msgid "List of ads"
@@ -126,12 +184,6 @@ msgstr "cena"
 msgid "No ads"
 msgstr "Brak ogłoszeń"
 
-#: ads/templates/ads/ads_list.html:150
-#, fuzzy
-#| msgid "Location"
-msgid "Localization"
-msgstr "Lokalizacja"
-
 #: ads/templates/ads/ads_list.html:151
 msgid "Added"
 msgstr "Dodano"
@@ -140,11 +192,7 @@ msgstr "Dodano"
 msgid "ago"
 msgstr "temu"
 
-#: ads/templates/ads/ads_list.html:151
-msgid "by"
-msgstr "przez"
-
-#: ads/templates/ads/ads_list.html:166
+#: ads/templates/ads/ads_list.html:163
 msgid "of"
 msgstr "z"
 
@@ -160,5 +208,18 @@ msgstr "Zaloguj się"
 msgid "Add new ad"
 msgstr "Dodaj ogłoszenie"
 
-#~ msgid "Choose condition"
-#~ msgstr "Wybierz stan"
+#, fuzzy
+#~| msgid "Add new ad"
+#~ msgid "Ad new notice"
+#~ msgstr "Dodaj ogłoszenie"
+
+#~ msgid "Source code available on"
+#~ msgstr "Kod źródłowy dostępny na"
+
+#, fuzzy
+#~| msgid "Location"
+#~ msgid "Localization"
+#~ msgstr "Lokalizacja"
+
+#~ msgid "by"
+#~ msgstr "przez"
