@@ -11,7 +11,7 @@
             {% trans "Sign in" %}
         </a>    
         {% endif %}
-        <a href="#" class="btn btn-new-ad fright">
+        <a href="{% url 'ads:create' %}" class="btn btn-new-ad fright">
             <i class="fa fa-plus" aria-hidden="true"></i>
             {% trans "Add new ad" %}
         </a>
