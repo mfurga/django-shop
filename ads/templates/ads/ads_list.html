@@ -144,7 +144,7 @@
                             <li class="result-item clear">
                                 <table class="details">
                                     <tr>
-                                        <td width="180px"><a href="#" class="bg-image"><img src="{{ ad.image.get_absolute_url }}" class="image" alt></a></td>
+                                        <td width="180px"><a href="#" class="bg-image"><img src="{{ ad.image_set.first.image.url }}" class="image" alt></a></td>
                                         <td class="detail">
                                             <h3><a href="#">{{ ad.title }}</a></h3>
                                             <div class="location">{% trans "Location" %}: {{ ad.location }}</div>

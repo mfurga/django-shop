@@ -25,21 +25,9 @@ CONDITIONS = (
 )
 
 
-class Image(models.Model):
-    image = models.ImageField(upload_to=get_image_filename)
-    prime = models.BooleanField(default=False)
-
-    class Meta:
-        ordering = ['-prime']
-
-    def get_absolute_url(self):
-        return self.image.url
-
-
 class Ad(models.Model):
     title = models.CharField(max_length=50)
     slug = models.SlugField(unique=True, blank=True, null=True)
-    image = models.ForeignKey(Image, on_delete=models.CASCADE)
     category = models.IntegerField(choices=CATEGORIES)
     description = models.TextField()
     condition = models.IntegerField(choices=CONDITIONS)
@@ -52,7 +40,7 @@ class Ad(models.Model):
         on_delete=models.CASCADE,
         default=1
     )
-    has_image = models.BooleanField(default=False)
+    has_photo = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['pub_date']
@@ -61,8 +49,20 @@ class Ad(models.Model):
         return self.title
 
 
+class Image(models.Model):
+    ad = models.ForeignKey(Ad, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to=get_image_filename)
+    prime = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['-prime']
+
+    def get_absolute_url(self):
+        return self.image.url
+
 def pre_save_ad(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = slug_generator(instance)
+
 
 pre_save.connect(pre_save_ad, sender=Ad)
