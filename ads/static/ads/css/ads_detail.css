@@ -1,0 +1,149 @@
+.breadcrumb {
+    background: none;
+    border-radius: 0;
+    list-style: outside none none;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    content: '\f105';
+    color: #8c8c8c;
+}
+
+.breadcrumb .breadcrumb-link {
+    font-size: 15px;
+    color: #8c8c8c;
+}
+
+.breadcrumb .active .breadcrumb-link {
+    color: #2dc79d;
+}
+
+.breadcrumb .active .breadcrumb-link:hover {
+    color: #239c7b;
+}
+
+#ads-detail {
+    background: #f9f9f9;
+    padding: 10px 0;
+}
+
+#ads-detail .inner {
+    float: left;
+    width: 600px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+#ads-detail .inner .ads-img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    position: relative;
+}
+
+#ads-detail .inner .ads-img .image {
+    width: auto;
+    max-width: 100%;
+    max-height: 300px;
+    vertical-align: middle;
+    border: 0;
+}
+
+#ads-detail .inner .ads-heading {
+    margin-top: 10px;
+}
+
+#ads-detail .inner .ads-heading .title {
+    font-size: 28px;
+}
+
+#ads-detail .inner .info-row {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+#ads-detail .inner .info-row .date, #ads-detail .inner .info-row .category, #ads-detail .inner .info-row .location {
+    font-size: 14px;
+    color: #5d5d5d;
+    border-right: 1px solid #e8e8e8;
+}
+
+#ads-detail .inner .info-row .date {
+    padding-right: 10px;
+}
+
+#ads-detail .inner .info-row .category {
+    padding: 0 10px;
+}
+
+#ads-detail .inner .info-row .location {
+    padding: 0 10px;
+    border: none;
+}
+
+#ads-detail .inner .ads-detail {
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+#ads-detail .inner .gallery {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#ads-detail .inner .gallery .image {
+    max-width: 100%;
+    max-height: 600px;
+}
+
+#ads-detail .inner-box {
+    background: #fff;
+    border-radius: 5px;
+}
+
+#ads-detail .sidebar {
+    float: right;
+    width: 240px;
+}
+
+#ads-detail .sidebar .price-label {
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#ads-detail .sidebar .price-label .price {
+    font-size: 24px;
+    color: #ff9900;
+}
+
+#ads-detail .sidebar .contact {
+    margin-top: 10px;
+    padding: 10px 10px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#ads-detail .sidebar .contact .user-icon {
+    color: #777;
+}
+
+#ads-detail .sidebar .contact .name {
+    margin: 3px 0;
+    font-size: 18px;
+}
+
+#ads-detail .sidebar .contact .phone-number {
+    padding: 5px 5px;
+    font-size: 20px;
+    background: #2dc79d;
+    color: #fff;
+    border-radius: 3px;
+}

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load pagination %}
+{% load i18n %}
+{% load static %}
+
+{% block title %} {{ ad.title }} {{ block.super }} {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ads/css/ads_detail.css' %}">
+{% endblock %}
+{% block content %}
+    {% include 'header.html' %}
+    <section id="ads-detail">
+        <div class="container clear">
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'ads:list' %}" class="breadcrumb-link"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'ads:list' %}" class="breadcrumb-link">{% trans "All ads" %}</a></li>
+                    <li class="breadcrumb-item active"><a href="{% url 'ads:list' %}?category={{ ad.category }}" class="breadcrumb-link">{{ ad.get_category_display }}</a></li>
+                </ol>
+            </nav>
+            <div class="inner inner-box">
+                <div class="ads-img tcenter">
+                    {% if ad.image_set.first.image.url %}
+                        <img src="{{ ad.image_set.first.image.url }}" class="image">
+                    {% else %}
+                        <img src="#" class="image">
+                    {% endif %}
+                </div>
+                <h1 class="ads-heading">
+                    <span class="title fbold">{{ ad.title }}</span>
+                </h1>
+                <div class="info-row">
+                    <span class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ ad.pub_date }}</span>
+                    <span class="category"><a href="">{{ ad.get_category_display }}</a></span>
+                    <span class="location">{{ ad.location }}</span>
+                </div>
+                <div class="ads-detail">
+                    {{ ad.description|linebreaksbr }}
+                </div>
+                <div class="gallery">
+                    {% if ad.image_set %}
+                        {% for i in ad.image_set.all %}
+                            <img src="{{ i.image.url }}" class="image">
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="sidebar tcenter">
+                <div class="price-label"><span class="price fbold">{{ ad.price }}</span></div>
+                <div class="contact">
+                    <div class="user-icon"><i class="fa fa-user-circle fa-5x" aria-hidden="true"></i></div>
+                    <div class="name">{{ ad.author }}</div>
+                    <div class="phone-number fbold"><i class="fa fa-phone" aria-hidden="true"></i> {{ ad.phone_number }}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <section class="elem">
+                        <ul class="list-category tcenter">
+                            <li><a href="?category=1">{% trans 'Automotive' %}</a></li>
+                            <li><a href="?category=2">{% trans 'Electronics' %}</a></li>
+                            <li><a href="?category=3">{% trans 'House and Garden' %}</a></li>
+                            <li><a href="?category=4">{% trans 'Immovables' %}</a></li>
+                            <li><a href="?category=5">{% trans 'Books' %}</a></li>
+                            <li><a href="?category=6">{% trans 'Games' %}</a></li>
+                            <li><a href="?category=7">{% trans 'Sport' %}</a></li>
+                            <li><a href="?category=8">{% trans 'Farming' %}</a></li>
+                            <li><a href="?category=9">{% trans 'Pets' %}</a></li>
+                            <li><a href="?category=10">{% trans 'Movies & Music' %}</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container clear">
+                <p class="tcenter">Source code avaiable on <a href="https://github.com/mfurga/django-shop">Github</a>.</p>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
