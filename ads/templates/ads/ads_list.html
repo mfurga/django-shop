@@ -7,13 +7,12 @@
 
 # Static files
 {% block head %}
-    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'ads/css/ads_list.css' %}">
 
-    <!-- JS -->
     <script type="text/javascript" src="{% static 'ads/js/jquery-3.3.1.js' %}"></script>
     <script type="text/javascript" src="{% static 'ads/js/search.js' %}"></script>
+    <script type="text/javascript" src="{% static 'messages.js' %}"></script>
 {% endblock %}
 {% block content %}
     {% include 'header.html' %}
@@ -126,7 +125,7 @@
                     <nav aria-label="breadcrumb" role="navigation">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#" class="breadcrumb-link"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">{% trans "All ads" %}</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'ads:list' %}" class="breadcrumb-link">{% trans "All ads" %}</a></li>
                             <li class="breadcrumb-item active" id="active"><a href="" class="breadcrumb-link"></a></li>
                         </ol>
                     </nav>
@@ -144,9 +143,9 @@
                             <li class="result-item clear">
                                 <table class="details">
                                     <tr>
-                                        <td width="180px"><a href="#" class="bg-image"><img src="{{ ad.image_set.first.image.url }}" class="image" alt></a></td>
+                                        <td width="180px"><a href="{% url 'ads:detail' ad.slug %}" class="bg-image"><img src="{{ ad.image_set.first.image.url }}" class="image" alt></a></td>
                                         <td class="detail">
-                                            <h3><a href="#">{{ ad.title }}</a></h3>
+                                            <h3><a href="{% url 'ads:detail' ad.slug %}">{{ ad.title }}</a></h3>
                                             <div class="location">{% trans "Location" %}: {{ ad.location }}</div>
                                             <div class="date">{% trans "Added" %}: {{ ad.pub_date|timesince }} {% trans "ago" %}</div>
                                         </td>

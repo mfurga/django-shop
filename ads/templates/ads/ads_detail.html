@@ -33,7 +33,7 @@
                 </h1>
                 <div class="info-row">
                     <span class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ ad.pub_date }}</span>
-                    <span class="category"><a href="">{{ ad.get_category_display }}</a></span>
+                    <span class="category"><a href="{% url 'ads:list' %}?category={{ ad.category }}">{{ ad.get_category_display }}</a></span>
                     <span class="location">{{ ad.location }}</span>
                 </div>
                 <div class="ads-detail">

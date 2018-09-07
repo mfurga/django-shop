@@ -17,6 +17,32 @@ ul, ol { list-style-type: none; }
 
 tr, td { text-align: left; }
 
+.success {
+    background: #8ff7a8;
+    color: #4a6f46;
+}
+
+.error {
+    background: #ff7979;
+    color: #a22525;
+}
+
+.alert {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.alert .closebtn {
+    margin-left: 15px;
+    color: #4a6f46;
+    float: right;
+    font-size: 22px;
+    line-height: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+
 .container {
     width: 870px;
     margin: 0 auto; 
