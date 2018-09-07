@@ -1,5 +1,7 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, redirect, get_object_or_404
+from django.utils.translation import gettext_lazy as _
+from django.contrib import messages
 from django.utils import timezone
 
 from .scripts import RequestGETParse
@@ -10,7 +12,7 @@ from .models import Ad, Image
 def ads_list(request):
     ads = Ad.objects.all()
 
-    if request.method == 'GET' and request.GET:
+    if request.method == 'GET':
         form = AdSearchFrom(request.GET)
 
         res = {k: v for k, v in request.GET.items() if v}
@@ -54,7 +56,7 @@ def ads_create(request):
             price = form.cleaned_data['price']
             phone_number = form.cleaned_data['phone']
             time = timezone.now()
-            
+
             photo = form.cleaned_data['photo']
             photo2 = form.cleaned_data['photo2']
             photo3 = form.cleaned_data['photo3']
@@ -69,13 +71,19 @@ def ads_create(request):
 
             ad.save()
 
-            if photo: Image.objects.create(ad=ad, image=photo, prime=True)
-            if photo2: Image.objects.create(ad=ad, image=photo2, prime=False)
-            if photo3: Image.objects.create(ad=ad, image=photo3, prime=False)
-            if photo4: Image.objects.create(ad=ad, image=photo4, prime=False)
+            Image.objects.create(ad=ad, image=photo, prime=True) if photo else None
+            Image.objects.create(ad=ad, image=photo2, prime=False) if photo2 else None
+            Image.objects.create(ad=ad, image=photo3, prime=False) if photo3 else None
+            Image.objects.create(ad=ad, image=photo4, prime=False) if photo4 else None
 
+            messages.success(request, _('The ad has been created.'))
             return redirect('ads:list')
     else:
         form = AdForm()
 
     return render(request, 'ads/ads_create.html', {'form': form})
+
+
+def ads_detial(request, slug):
+    ad = get_object_or_404(Ad, slug=slug)
+    return render(request, 'ads/ads_detail.html', {'ad': ad})
