@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Signin' %} {{ block.super }}{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/users_signin.css' %}">
+{% endblock %}
+{% block content %}
+    <section id="login-page">
+        <div class="content container">
+            <section id="login-form" class="shadow">
+                <form action="" method="post" class="form fblock">
+                    {% csrf_token %}
+                    <section class="form-inputs fblock">
+                        {{ form.username }}
+                        {{ form.password }}
+                        {% if invalid_credentials %}
+                            <div class="error_message">
+                                <div class="errorlist">{% trans 'Username or password is incorrect' %}.</div>
+                            </div>
+                        {% endif %}
+                    </section>
+                    <button class="form-submit"><span class="fbold tupper">{% trans 'Sign in' %}</span></button>
+                </form>
+                <div class="links">
+                    {% trans 'New customer' %}? <a href="#" class="btn-signup">{% trans 'Sign up' %}</a>
+                    <a href="#" style="float: right">{% trans 'Back to home' %} <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                </div>
+            </section>
+        </div>
+    </section>
+{% endblock %}
