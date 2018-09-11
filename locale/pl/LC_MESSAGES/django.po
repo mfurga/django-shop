@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-06 09:08+0000\n"
+"POT-Creation-Date: 2018-09-10 07:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -214,13 +214,54 @@ msgstr "Ogłoszenie zostało dodane."
 msgid "Logout"
 msgstr "Wyloguj się"
 
-#: common/templates/header.html:11
+#: common/templates/header.html:11 users/templates/users/users_signin.html:5
+#: users/templates/users/users_signin.html:26
 msgid "Sign in"
 msgstr "Zaloguj się"
 
 #: common/templates/header.html:16
 msgid "Add new ad"
 msgstr "Dodaj ogłoszenie"
+
+#: users/forms.py:11
+msgid "Email address"
+msgstr "Adres email"
+
+#: users/forms.py:18 users/forms.py:61
+msgid "Your password"
+msgstr "Twoje hasło"
+
+#: users/forms.py:25
+msgid "Repeat your password"
+msgstr "Potórz hasło"
+
+#: users/forms.py:37
+msgid "This user already exists."
+msgstr "Użytkownik o podanym loginie już istnieje."
+
+#: users/forms.py:45
+msgid "Passwords are not the same."
+msgstr "Hasła nie są takie same."
+
+#: users/forms.py:54
+msgid "Username"
+msgstr "Login"
+
+#: users/templates/users/users_signin.html:22
+msgid "Username or password is incorrect"
+msgstr "Login lub hasło są nieprawidłowe"
+
+#: users/templates/users/users_signin.html:29
+msgid "New customer"
+msgstr "Nowy klient"
+
+#: users/templates/users/users_signin.html:29
+msgid "Sign up"
+msgstr "Zarejestruj się"
+
+#: users/views.py:27
+msgid "Logged in successfully."
+msgstr "Zalogowano pomyślnie."
 
 #, fuzzy
 #~| msgid "Add new ad"
