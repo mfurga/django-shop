@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext_lazy as _
-from django.shortcuts import render, reverse
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
 from .forms import SigninForm
@@ -32,3 +32,9 @@ def users_signin(request):
         'invalid_credentials': invalid_credentials
     }
     return render(request, 'users/users_signin.html', context)
+
+
+def users_logout(request):
+    logout(request)
+    messages.success(request, _('Logout successfully.'))
+    return redirect('ads:list')

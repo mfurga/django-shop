@@ -1,12 +1,12 @@
 {% load i18n %}<nav id="navbar">
     <div class="container clear">
         {% if request.user.is_authenticated %}
-        <a href="#" class="navbar-user fright">
+        <a href="{% url 'users:logout' %}" class="navbar-user fright">
             <i class="fa fa-user-o fa-lg" aria-hidden="true"></i>
             {{ request.user }} ({% trans "Logout" %})
         </a>
         {% else %}
-        <a href="#" class="navbar-user fright">
+        <a href="{% url 'users:signin' %}" class="navbar-user fright">
             <i class="fa fa-user-o fa-lg" aria-hidden="true"></i>
             {% trans "Sign in" %}
         </a>    
