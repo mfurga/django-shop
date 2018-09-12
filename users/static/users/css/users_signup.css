@@ -1,0 +1,108 @@
+input, select {
+    -ms-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f9f9;
+}
+
+.shadow {
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.error_message {
+    display: block;
+    padding-top: 5px;
+    color: #ff7979;
+}
+
+.error_message .errorlist {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.content {
+    width: 380px;
+}
+
+.fblock {
+    margin-bottom: 15px !important;
+}
+
+.form-submit {
+    width: 100%;
+    height: 40px;
+    background: #ff9900;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: none;
+    border: none;
+    font-size: 16px;
+}
+
+.form-submit:hover {
+    cursor: pointer;
+    background: #ffb100;
+}
+
+.g-recaptcha {
+    margin-bottom: 10px;
+}
+
+#login-page {
+    margin-top: 80px;
+}
+
+#login-page #login-form {
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+#login-page #login-form .login-text {
+    text-align: center;
+}
+
+#login-page #login-form .form {
+    width: 100%;
+}
+
+#login-page #login-form .form .form-inputs {
+    display: block;
+}
+
+#login-page #login-form .form .form-inputs .form-input {
+    width: 100%;
+    max-width: 500px;
+    height: 40px;
+    margin: 7px auto 0;
+    padding-left: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#login-page #login-form .form .form-inputs .form-checkbox {
+    margin-top: 15px;
+    background: #fff !important;
+    color: #fff;
+    width: 14px;
+    height: 14px;
+}
+
