@@ -4,11 +4,11 @@ from django import forms
 
 
 class SignupForm(forms.Form):
-    email = forms.EmailField(
+    username = forms.CharField(
         max_length=40,
         widget=forms.TextInput(attrs={
             'class': 'form-input',
-            'placeholder': _('Email address')
+            'placeholder': _('Username')
         })
     )
     password = forms.CharField(
