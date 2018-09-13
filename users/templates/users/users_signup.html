@@ -17,10 +17,10 @@
                 <form action="" method="post" class="form fblock">
                     {% csrf_token %}
                     <section class="form-inputs fblock">
-                        {{ form.email }}
-                        {% if form.email.errors %}
+                        {{ form.username }}
+                        {% if form.username.errors %}
                             <div class="error_message">
-                                {{ form.email.errors }}
+                                {{ form.username.errors }}
                             </div>
                         {% endif %}
                         {{ form.password }}
@@ -42,16 +42,16 @@
                             </div>
                         {% endif %}
                     </section>
-                    <div class="g-recaptcha" data-sitekey="6LelHw0UAAAAAIWj6dVfIxFVKnFMPCLjZCM1RIMh"></div>
-                    {% if not g_recaptcha_valid %}
+                    <div class="g-recaptcha" data-sitekey="6Lecxm8UAAAAAAQGyNcCrQwG3rcKomWHdi26Mhra"></div>
+                    {% if recaptcha_respone %}
                         <div class="error_message">
                             <div class="errorlist">{% trans 'Recaptch error' %}</div>
                         </div>
                     {% endif %}
-                    <button class="form-submit"><span class="fbold tupper">{% trans 'Signup' %}</span></button>
+                    <button class="form-submit"><span class="fbold tupper">{% trans 'Sign up' %}</span></button>
                 </form>
                 <div class="links">
-                    <span><a href="{% url 'users:signin' %}">{% trans 'Singin' %}</a></span>
+                    <span><a href="{% url 'users:signin' %}">{% trans 'Sign in' %}</a></span>
                     <a href="{% url 'ads:list' %}" style="float: right">{% trans 'Back to home page' %} <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </div>
             </section>

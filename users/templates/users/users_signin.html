@@ -7,6 +7,8 @@
 {% block head %}
     <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'users/css/users_signin.css' %}">
+    <script type="text/javascript" src="{% static 'ads/js/jquery-3.3.1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'messages.js' %}"></script>
 {% endblock %}
 {% block content %}
     <section id="login-page">
@@ -26,8 +28,8 @@
                     <button class="form-submit"><span class="fbold tupper">{% trans 'Sign in' %}</span></button>
                 </form>
                 <div class="links">
-                    {% trans 'New customer' %}? <a href="#" class="btn-signup">{% trans 'Sign up' %}</a>
-                    <a href="#" style="float: right">{% trans 'Back to home page' %} <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    {% trans 'New customer' %}? <a href="{% url 'users:signup' %}" class="btn-signup">{% trans 'Sign up' %}</a>
+                    <a href="{% url 'ads:list' %}" style="float: right">{% trans 'Back to home page' %} <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </div>
             </section>
         </div>
