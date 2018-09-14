@@ -11,6 +11,8 @@ import requests
 
 
 def users_signin(request):
+    if request.user.is_authenticated:
+        raise Http404
     next_page = request.GET.get('next') or reverse('ads:list')
     invalid_credentials = None
     form = SigninForm()
@@ -38,6 +40,8 @@ def users_signin(request):
 
 
 def users_signup(request):
+    if request.user.is_authenticated:
+        raise Http404
     form = SignupForm()
     recaptcha_respone = False
 
@@ -66,6 +70,8 @@ def users_signup(request):
 
 
 def users_logout(request):
+    if not request.user.is_authenticated:
+        raise Http404
     logout(request)
     messages.success(request, _('Logout successfully.'))
     return redirect('ads:list')

@@ -60,6 +60,7 @@ class Image(models.Model):
     def get_absolute_url(self):
         return self.image.url
 
+
 def pre_save_ad(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = slug_generator(instance)

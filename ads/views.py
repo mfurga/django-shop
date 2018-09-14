@@ -1,5 +1,6 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.utils.translation import gettext_lazy as _
 from django.contrib import messages
 from django.utils import timezone
@@ -43,31 +44,32 @@ def ads_list(request):
     return render(request, 'ads/ads_list.html', context)
 
 
+@login_required(login_url='/account/signin')
 def ads_create(request):
     if request.method == 'POST':
         form = AdForm(request.POST, request.FILES)
 
         if form.is_valid():
-            title = form.cleaned_data['title']
-            category = form.cleaned_data['category']
-            description = form.cleaned_data['description']
-            condition = form.cleaned_data['condition']
-            location = form.cleaned_data['location']
-            price = form.cleaned_data['price']
-            phone_number = form.cleaned_data['phone']
+            title = form.cleaned_data.get('title')
+            category = form.cleaned_data.get('category')
+            description = form.cleaned_data.get('description')
+            condition = form.cleaned_data.get('condition')
+            location = form.cleaned_data.get('location')
+            price = form.cleaned_data.get('price')
+            phone_number = form.cleaned_data.get('phone')
             time = timezone.now()
 
-            photo = form.cleaned_data['photo']
-            photo2 = form.cleaned_data['photo2']
-            photo3 = form.cleaned_data['photo3']
-            photo4 = form.cleaned_data['photo4']
+            photo = form.cleaned_data.get('photo')
+            photo2 = form.cleaned_data.get('photo2')
+            photo3 = form.cleaned_data.get('photo3')
+            photo4 = form.cleaned_data.get('photo4')
             author = request.user
 
             has_photo = True if photo else False
 
-            ad = Ad(title=title, category=category, description=description, condition=condition,
-                    location=location, phone_number=phone_number, price=price, pub_date=time,
-                    author=author, has_photo=has_photo)
+            ad = Ad(title=title, category=category, description=description,
+                    condition=condition, location=location, phone_number=phone_number,
+                    price=price, pub_date=time, author=author, has_photo=has_photo)
 
             ad.save()
 
