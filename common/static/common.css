@@ -129,6 +129,6 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 #footer .footer-bottom {
-    padding: 20px 0;
-    background: #efefef;
+    padding: 15px 0;
+    background: #f3f3f3;
 }
