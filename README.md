@@ -4,7 +4,7 @@
 ![Shop Image](https://raw.githubusercontent.com/mfurga/django-shop/master/shop.png)
 
 ## Requirements
-- Django 2.1
+- Django 2.1.2
 - Django REST Framework
 - Pillow
 - Requests
