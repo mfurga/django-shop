@@ -8,6 +8,8 @@ migrations/
 *.mo
 
 media/
+.env
+.vscode
 
 
 
