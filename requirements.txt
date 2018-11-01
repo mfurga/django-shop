@@ -2,5 +2,5 @@ Django==2.1.2
 Pillow==5.2.0
 pytz==2018.5
 ipython==6.5.0
-requests==2.19.1
+requests==2.20.0
 djangorestframework==3.8.2
